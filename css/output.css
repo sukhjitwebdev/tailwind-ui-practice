@@ -11,8 +11,10 @@
     --color-orange-500: oklch(70.5% 0.213 47.604);
     --color-cyan-500: oklch(71.5% 0.143 215.221);
     --color-blue-400: oklch(70.7% 0.165 254.624);
+    --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-blue-700: oklch(48.8% 0.243 264.376);
+    --color-blue-900: oklch(37.9% 0.146 265.522);
     --color-indigo-600: oklch(51.1% 0.262 276.966);
     --color-violet-50: oklch(96.9% 0.016 293.756);
     --color-violet-100: oklch(94.3% 0.029 294.588);
@@ -295,6 +297,9 @@
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
   }
+  .mt-12 {
+    margin-top: calc(var(--spacing) * 12);
+  }
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
   }
@@ -321,6 +326,10 @@
   }
   .inline-flex {
     display: inline-flex;
+  }
+  .size-4 {
+    width: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 4);
   }
   .size-5 {
     width: calc(var(--spacing) * 5);
@@ -585,11 +594,17 @@
   .p-7 {
     padding: calc(var(--spacing) * 7);
   }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
   }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
@@ -714,6 +729,12 @@
   }
   .text-black {
     color: var(--color-black);
+  }
+  .text-blue-400 {
+    color: var(--color-blue-400);
+  }
+  .text-blue-500 {
+    color: var(--color-blue-500);
   }
   .text-blue-600 {
     color: var(--color-blue-600);
@@ -876,6 +897,20 @@
       }
     }
   }
+  .hover\:text-blue-900 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-blue-900);
+      }
+    }
+  }
+  .hover\:text-gray-900 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-gray-900);
+      }
+    }
+  }
   .hover\:underline {
     &:hover {
       @media (hover: hover) {
@@ -897,6 +932,16 @@
   .focus\:ring-violet-100 {
     &:focus {
       --tw-ring-color: var(--color-violet-100);
+    }
+  }
+  .focus\:outline-hidden {
+    &:focus {
+      --tw-outline-style: none;
+      outline-style: none;
+      @media (forced-colors: active) {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+      }
     }
   }
   .focus\:outline-none {
