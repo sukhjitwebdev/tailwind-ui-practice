@@ -8,7 +8,10 @@
 
      <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"  
+     rel="stylesheet"/>
+
+    
 
 
     <title>Centered FAQ Accordion</title>
@@ -20,25 +23,102 @@
  <!-------- FAQ --------->
     
 <!-- Section Header --> 
- <section class="max-w-7xl mx-auto px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+ <section class="max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
 
     <!-- Title -->
-    <div class ="max-w-2xl mx-auto text-center mb-10">
-    <h2 class="text-2xl font-bold text-foreground"> Frequently Asked Questions </h2> 
-    <p class="mt-1 text-gray-800"> Answers to common questions about our services and process. </p>
+    <div class ="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+    <h2 class="text-2xl font-bold md:text-4xl md:leading-tight text-foreground">Your questions, answered </h2> 
+    <p class="mt-1 text-gray-800"> Answers to the most frequently asked questions. </p>
     </div> 
+
+    <!-- End Title -->
+
+    <!-- Wrapper -->
+     <div class="max-w-2xl mx-auto">
+
+        <!-- Group -->
+        <div class="hs-accordion-group">
+
+            <!-- Item -->
+            <div class="hs-accordion hs-accordion-active:bg-[#f3f4f6] rounded-xl p-6" id="hs-basic-with-title-and-arrow-stretched-heading-one">
+
+                
+
+                <button class = "hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-foreground rounded-lg transition hover:text-gray-500 focus:outline-hidden" aria-expanded="true" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one">
+                    Can I cancel at anytime?
+                    
+                    <svg class= "arrow-down block shrink-0 size-5 text-muted-foreground-2 group-hover:text-muted-foreground-1" xmlns="http://www.w3.org/2000/svg" width= "24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg> 
+
+                    <svg class="arrow-up hidden shrink-0 size-5 text-muted-foreground-2 group-hover:text-muted-foreground-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+                </button>
+
+                <!-- Answer Area -->
+                <div id="hs-basic-with-title-and-arrow-stretched-collapse-one" class="hs-accordion-content hidden w-full  overflow-hidden transition-[height] duration-300" role="region"  aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one">
+
+                    <!-- Text -->
+                     
+                    <p class="text-foreground">
+                         Yes, you can cancel anytime no questions are asked while you cancel but we would highly appreciate if you will give us some feedback.
+                    </p>
+                    
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+     </div>   
+
+
+    
 
     
 
 
 
-    <!-- End Title -->
+
 
      <!-- FAQ -->
 
 
 
- </section> 
+ </section>    
+ 
+            <!--
+            Preline accordion opens/closes correctly.
+
+            Custom CSS is used because the Tailwind build
+            is not generating hs-accordion-active:* variants.
+
+            When the accordion receives the "active" class,
+            the background color and arrow state are updated
+            through CSS below.
+            -->
+ 
+ 
+            <style>
+            .hs-accordion.active {
+            background-color: #f3f4f6;
+            }
+
+            .hs-accordion.active .arrow-down {
+            display: none;
+            }
+
+            .hs-accordion.active .arrow-up {
+            display: block;
+            }
+            </style>
+
+
+
+            
+         <script src="https://cdn.jsdelivr.net/npm/preline@latest/dist/preline.js"></script>
+        
+      
+            
    </body>
 
    </html>
